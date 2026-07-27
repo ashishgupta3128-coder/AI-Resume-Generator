@@ -1,0 +1,8 @@
+streamlit
+langchain
+pytesseract
+lanchain_groq
+langchain_google_genai
+mumpy
+lanchain_community
+tavily
