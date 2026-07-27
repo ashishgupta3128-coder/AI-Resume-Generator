@@ -3,6 +3,6 @@ langchain
 pytesseract
 langchain_groq
 langchain_google_genai
-mumpy
+numpy
 langchain_community
 tavily
