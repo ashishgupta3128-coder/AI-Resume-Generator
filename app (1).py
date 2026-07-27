@@ -11,7 +11,7 @@ score""")
 
 #===================AGENT SCORE=================
 # step2: Load Module
-import IPython as ip
+
 import os
 import time
 import langchain
