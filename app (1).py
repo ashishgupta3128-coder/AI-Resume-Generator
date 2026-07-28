@@ -115,6 +115,26 @@ query = final_prompt+user_details
 
 import base64
 
+OPTIONS = ["DELHI", "NOIDA", "GURGAON", "BIHAR",
+           "PATNA", "LUCKNOW", "KANPUR", "PUNE",
+           "EDINGURGH"]
+
+LOCATION = st.sidebar.multiselect()
+
+JOB_PROFILE = ["PYTHON DEVELOPER", "GEN AI",
+               "FULL-STACK DEVELOPER", "VIDEO CREDITOR",
+               "DATA ANALYSIS"]
+
+PROFILE = st.sidebar.multiselect("SELECT JOB ROLE",
+                 options = JOB_PROFILE)
+
+job_prompt = f"""Based on {PROFILE} jobs in {LOCATION}, I
+want latest jobs new in using tavily,
+try top 10 search or whatever available
+and give result like naukri theme design with job name, job desc, salary
+apply link"""
+                                 
+
 if st.button('generate resume'):
   with st.spinner("runnign agent"):
 
@@ -132,4 +152,12 @@ if st.button('generate resume'):
       
     
     st.html(code , width="stretch" , unsafe_allow_javascript=True)
+
+    st.divider()
+    response = agent.invoke({'messages':[{'role':'user','content':job_prompt}]}
+
+    job_code = response['messages'][-1].content[-1]['text']
+    st.html(job_code , width="stretch" , unsafe_allow_javascript=True)
+
+   
     
