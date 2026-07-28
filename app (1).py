@@ -132,7 +132,7 @@ job_prompt = f"""Based on {PROFILE} jobs in {LOCATION}, I
 want latest jobs new in using tavily,
 try top 10 search or whatever available
 and give result like naukri theme design with job name, job desc, salary
-apply link"""
+apply link and OUTPUT must be in HTML no markdown"""
                                  
 
 if st.button('generate resume'):
