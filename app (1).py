@@ -119,7 +119,7 @@ OPTIONS = ["DELHI", "NOIDA", "GURGAON", "BIHAR",
            "PATNA", "LUCKNOW", "KANPUR", "PUNE",
            "EDINGURGH"]
 
-LOCATION = st.sidebar.multiselect(SELECT LOCATION:
+LOCATION = st.sidebar.multiselect("SELECT LOCATION: "
                                  options = OPTIONS )
 
 JOB_PROFILE = ["PYTHON DEVELOPER", "GEN AI",
