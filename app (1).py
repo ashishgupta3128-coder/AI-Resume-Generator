@@ -2,8 +2,7 @@ import streamlit as st
 from PIL import Image
 # steream lit is web based pyhton frame work 
 st.title ("ai resume maker")
-st.markdown("""##user can create or download resume based on high ats score
-Ashish Gupta""")
+st.markdown("""##user can create or download resume based on high ats score""")
 #=============================agent code :))=======================================
 import os
 import time
@@ -18,7 +17,7 @@ import numpy as np
 import streamlit as st
 from langchain_community.document_loaders import PyMuPDFLoader
 # api keys
-GOOGLE= st.sidebar.text_input("GOOGLE",type="password")
+GOOGLE= st.sidebar.text_input("GEMINI",type="password")
 GROQ= st.sidebar.text_input("GROQ",type="password")
 TAVILY =st.sidebar.text_input("TAVILY",type="password")
 if not (GOOGLE) and not (GROQ) and not (TAVILY):
